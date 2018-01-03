@@ -1,4 +1,6 @@
 
+
+
 console.log(peopleInSpace)
 
 const numberOfAstrosInSpace = (data) => {
@@ -54,3 +56,18 @@ console.log("where's Joe? ", wheresJoe(peopleInSpace))
 
 // BONUS
 // Using your astroNames function, dynamically render each of the astronauts' names to the DOM in an unordered list when the page loads.
+
+
+const list = document.getElementById("astroList")
+window.onload = () => {
+	var astronames = astroNames(peopleInSpace);
+	var astroname = [];
+	astronames.forEach((n) => {
+		console.log("7")
+	     astroname.push('<li>' + n + '</li>');
+	});	
+	console.log("astronames")
+	strlist = astroname.join("")
+	list.innerHTML = strlist
+	
+}
